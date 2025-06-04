@@ -5,13 +5,14 @@ from pytubefix import YouTube
 from difflib import SequenceMatcher
 import subprocess
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path="/static")
 app.config['UPLOAD_FOLDER'] = "uploads"
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
-model = whisper.load_model("tiny")
+
 
 
 def transcribe_video(video_path):
+    model = whisper.load_model("tiny")
     result = model.transcribe(video_path, verbose=True)
     return result['segments']
 
