@@ -8,7 +8,7 @@ import subprocess
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = "uploads"
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
-model = whisper.load_model("small")
+model = whisper.load_model("tiny")
 
 
 def transcribe_video(video_path):
