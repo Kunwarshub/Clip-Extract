@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Clip Extractor</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <!-- Techy corner elements -->
+    <div class="corner top-left"></div>
+    <div class="corner top-right"></div>
+    <div class="corner bottom-left"></div>
+    <div class="corner bottom-right"></div>
+
+    <!-- Centered form -->
+    <div class="form-container">
+        <form action="/extractGIF" method="POST" enctype="multipart/form-data">
+            <h2>🎯 Extract Prompt-based Clip</h2>
+
+            <label for="prompt">Enter Prompt:</label>
+            <input type="text" name="prompt" id="prompt" required>
+
+            <label for="url">Paste YouTube URL:</label>
+            <input type="url" name="url" id="url">
+
+            <p>— OR —</p>
+
+            <label for="video">Upload Video File:</label>
+            <input type="file" name="video" id="video" accept="video/mp4">
+
+            <input type="submit" value="Extract Clip 🔍">
+        </form>
+    </div>
+</body>
+</html>
